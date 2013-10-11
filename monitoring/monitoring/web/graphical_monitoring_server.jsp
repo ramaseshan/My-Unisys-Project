@@ -1,0 +1,183 @@
+<%@page import="java.util.Properties"%>
+<%@ page import="java.sql.*" %>
+<%@ page import="java.io.*" %>
+<%@ page import="org.jfree.chart.ChartFactory" %>
+<%@ page import="org.jfree.chart.ChartUtilities" %>
+<%@ page import="org.jfree.chart.JFreeChart" %>
+<%@ page import="org.jfree.chart.plot.PlotOrientation"%>
+<%@ page import="org.jfree.data.*" %>
+<%@ page import="org.jfree.data.jdbc.JDBCCategoryDataset"%>
+  <%@ page import="java.io.*,java.util.*" %>
+<%@ page import="javax.servlet.*,java.text.*" %>
+ <%@ page import="java.sql.*"%>
+
+<%@page import="org.jfree.data.general.DefaultKeyedValues2DDataset"%>
+<%@page import="org.jfree.data.time.TimeSeriesCollection"%>
+<%@ page import="java.io.*"%>
+<%@ page import="java.sql.*"%>
+
+<%@page import="java.util.Date"%>
+<%@page import="org.jfree.data.time.TimeSeries"%>
+<%@page import="org.jfree.data.time.Day"%>
+<%@page import="org.jfree.chart.plot.PiePlot3D"%>
+<%@page import="org.jfree.data.general.DefaultPieDataset"%>
+<%@page import="org.jfree.chart.ChartFactory"%>
+<%@page import="java.io.FileInputStream"%>
+<%@ page import="java.io.*" %>
+<%@ page import="org.jfree.chart.ChartUtilities" %>
+<%@ page import="org.jfree.chart.*" %>
+<%@ page import="org.jfree.chart.title.*" %>
+<%@ page import="org.jfree.data.general.DefaultPieDataset" %>
+<%@ page import="org.jfree.*" %>
+<%@ page import="org.jfree.ui.*" %>
+<%@ page import="org.jfree.chart.plot.*" %>
+<%@ page import="org.jfree.util.*"%>
+<%@ page import="java.awt.BasicStroke"%>
+<%@ page import="java.awt.Color"%>
+<%@ page import="java.awt.Dimension"%>
+<%@ page import="java.awt.Font"%><%@ page import="javax.swing.JPanel"%><%@ page import="org.jfree.chart.ChartPanel"%>
+<%@ page import="org.jfree.chart.JFreeChart"%>
+<%@ page import="org.jfree.chart.plot.DialShape"%>
+<%@ page import="org.jfree.chart.plot.MeterInterval"%>
+<%@ page import="org.jfree.chart.plot.MeterPlot"%>
+<%@ page import="org.jfree.data.Range"%><%@ page import="org.jfree.data.general.DefaultValueDataset"%>
+<%@ page import="org.jfree.data.general.ValueDataset"%><%@ page import="org.jfree.ui.RefineryUtilities"%>
+<%@ page import="org.jfree.ui.ApplicationFrame"%>
+
+
+<%@ page import="java.io.*" %>
+<%@ page import="org.jfree.chart.JFreeChart" %>
+<%@ page import="org.jfree.chart.ChartUtilities" %>
+<%@ page import="org.jfree.chart.*" %>
+<%@ page import="org.jfree.chart.title.*" %>
+<%@ page import="org.jfree.data.general.DefaultPieDataset" %>
+<%@ page import="org.jfree.ui.*" %>
+<%@ page import="org.jfree.chart.plot.*" %>
+<%@ page import="org.jfree.util.*"%>
+<%@ page import="java.awt.*"%>
+
+
+
+<%@ page import="java.awt.*"%>
+
+
+
+
+ <%@page import="org.jfree.data.time.TimeSeriesCollection"%>
+<%@page import="org.jfree.data.time.TimeSeries"%>
+<%@page import="org.jfree.data.time.Day"%>
+<%@page import="java.awt.Font"%>
+<%@page import="org.jfree.chart.plot.DialShape"%>
+<%@page import="java.awt.Color"%>
+<%@page import="java.awt.BasicStroke"%>
+<%@page import="org.jfree.chart.plot.MeterInterval"%>
+<%@page import="org.jfree.data.Range"%>
+<%@page import="org.jfree.chart.plot.MeterPlot"%>
+<%@page import="org.jfree.data.general.DefaultValueDataset"%>
+<%@page import="java.io.InputStream"%>
+<%@page import="org.jfree.chart.ChartUtilities"%>
+<%@page import="java.io.File"%>
+<%@page import="org.jfree.chart.plot.PiePlot3D"%>
+<%@page import="org.jfree.chart.JFreeChart"%>
+<%@page import="org.jfree.chart.ChartFactory"%>
+<%@page import="org.jfree.data.general.DefaultPieDataset"%>
+<%@page import="java.io.FileInputStream"%>
+<%@ page import="java.sql.*"%>
+
+<%
+String query="SELECT * from login.usage";
+JDBCCategoryDataset dataset=new JDBCCategoryDataset("jdbc:mysql://localhost:3306/login",
+"com.mysql.jdbc.Driver","root","");
+
+dataset.executeQuery( query);
+JFreeChart chart = ChartFactory .createBarChart3D(
+"APPLICATION USAGE", 
+"APPLICATION SERVER NAME", 
+"USAGE NUMBER", 
+dataset, 
+PlotOrientation.VERTICAL,true, true, false);
+
+try
+{
+ FileInputStream fis; File ps=new File("C:\\Users\\Seshan\\Documents\\NetBeansProjects\\monitoring\\monitoring\\web\\images\\bar.png");
+                ChartUtilities.saveChartAsPNG(ps,chart, 400,500);
+ Properties prop = new Properties();
+
+      prop.load(getServletContext().getResourceAsStream("/WEB-INF/admin.properties"));
+        
+
+
+        String connectionURL=prop.getProperty("connurl");
+           
+         
+        String d,state,ud,name;
+        Connection connection=null;
+Class.forName(prop.getProperty("driver")).newInstance();
+connection=DriverManager.getConnection(connectionURL,prop.getProperty("dbuser"),prop.getProperty("dbpassword"));
+Statement theStatement=connection.createStatement();
+Statement St=connection.createStatement();
+File ps1=null;
+File pie=null;
+ ResultSet theResult4=theStatement.executeQuery("select * from login.number");
+ 
+ while(theResult4.next())         
+         {
+
+ DefaultPieDataset pieDataset = new DefaultPieDataset();
+ 
+  pieDataset.setValue("RTF IDLE", theResult4.getInt(5));
+    pieDataset.setValue("TXT IDLE",theResult4.getInt(4));
+    pieDataset.setValue("HTML IDLE",theResult4.getInt(6));
+
+  JFreeChart chart1 = ChartFactory.createPieChart3D("APPLICATION SERVER MONITORING", pieDataset, true,true,true);
+  PiePlot3D p=(PiePlot3D)chart1.getPlot();
+  p.setForegroundAlpha(0.5f);
+  pie=new File("C:\\Users\\Seshan\\Documents\\NetBeansProjects\\monitoring\\monitoring\\web\\images\\pie.png");
+ChartUtilities.saveChartAsPNG(pie, chart1, 300,400);
+ }
+   //--meter chart--ends
+
+     ResultSet theResult3=theStatement.executeQuery("select * from login.inout");
+ 
+ while(theResult3.next())         
+         {
+
+        
+        DefaultKeyedValues2DDataset defaultkeyedvalues2ddataset = new DefaultKeyedValues2DDataset();
+        
+                defaultkeyedvalues2ddataset.addValue(-theResult3.getInt(1), "IN", "TEXT");
+                defaultkeyedvalues2ddataset.addValue(-theResult3.getInt(3), "IN", "RTF");
+                defaultkeyedvalues2ddataset.addValue(-theResult3.getInt(5), "IN", "HTML");
+                defaultkeyedvalues2ddataset.addValue(theResult3.getInt(2), "OUT", "TEXT");
+                defaultkeyedvalues2ddataset.addValue(theResult3.getInt(4), "OUT", "RTF");
+                defaultkeyedvalues2ddataset.addValue(theResult3.getInt(6), "OUT", "HTML");
+                org.jfree.chart.JFreeChart jfreechart1 = ChartFactory.createStackedBarChart("INCOMEING AND OUTGOING FILES GRAPH", "APPLICAITION NAME", "NUMBER OF FILES", defaultkeyedvalues2ddataset, PlotOrientation.HORIZONTAL, true, true, false);
+                ChartPanel chartpanel = new ChartPanel(jfreechart1);
+                chartpanel.setPreferredSize(new Dimension(500, 270));
+              ps1=new File("C:\\Users\\Seshan\\Documents\\NetBeansProjects\\monitoring\\monitoring\\web\\images\\partnership.png");
+                ChartUtilities.saveChartAsPNG(ps1,jfreechart1, 400,500);
+                               }
+     
+PreparedStatement psmnt = null;
+
+  
+psmnt = connection.prepareStatement("update image set bar=?,pie=?,partnership=? where bar!=0");
+
+fis = new FileInputStream(ps);
+psmnt.setBinaryStream(1, (InputStream)fis, (int)(ps.length()));
+
+fis = new FileInputStream(pie);
+psmnt.setBinaryStream(2, (InputStream)fis, (int)(pie.length()));
+fis = new FileInputStream(ps1);
+psmnt.setBinaryStream(3, (InputStream)fis, (int)(ps1.length()));
+int s = psmnt.executeUpdate();
+   psmnt.close();
+
+
+
+}
+catch (IOException e)
+{
+System.out.println("Problem in creating chart.");
+}
+%>

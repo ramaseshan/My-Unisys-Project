@@ -1,0 +1,51 @@
+/* 
+    Document   : fonts
+    Created on : Jan 12, 2013, 9:26:52 PM
+    Author     : selvaas
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+@font-face {
+    font-family: "comic";
+    src: url(../fonts/comic.ttf) format("truetype");
+    
+}
+@font-face{
+    font-family: "grill";
+    src: url(../fonts/OLDENGL.TTF) format("truetype");
+}
+@font-face{
+    font-family: "oregon";
+    src: url(../fonts/Oregon.ttf) format("opentype");
+}
+@font-face{
+    font-family: "alger";
+    src: url(../fonts/alger.ttf) format("truetype");
+}
+@font-face{
+    font-family: "papyrus";
+    src: url(../fonts/PAPYRUS.TTF) format("truetype");
+}
+@font-face{
+    font-family: "segoe";
+    src: url(../fonts/segoesc.ttf) format("truetype");
+}
+@font-face{
+    font-family: "segoeb";
+    src: url(../fonts/segoescb.ttf) format("truetype");
+}
+@font-face{
+    font-family: "shield";
+    src: url(../fonts/JannisaryShield.ttf) format("truetype");
+}
+@font-face{
+    font-family: "ace";
+    src: url(../fonts/Ace.ttf) format("truetype");
+}
+@font-face {
+    font-family: "circula";
+    src: url(../fonts/circula-medium.otf) format("truetype");
+    
+}

@@ -1,0 +1,189 @@
+/* 
+    Document   : button
+    Created on : Jan 9, 2013, 9:40:01 AM
+    Author     : Lalith
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+
+
+@import url("fonts.css");
+
+.button {
+  -moz-border-radius: 25px;
+  -moz-box-shadow: #6E7849 0px 0px 10px;
+  -webkit-border-radius: 25px;
+  -webkit-box-shadow: #6E7849 0 0 10px;
+  background-color: #495678;
+  background-image: -moz-radial-gradient(center 1154deg, circle farthest-side, #88b7c7, #495678);
+  background-image: -ms-radial-gradient(center 1154deg, circle farthest-side, #88b7c7, #495678);
+  background-image: -webkit-radial-gradient(center 1154deg, circle farthest-side, #88b7c7, #495678);
+  background-image: radial-gradient(center 1154deg, circle farthest-side, #88b7c7, #495678);
+  border-radius: 25px;
+  border: 2px solid #4a5032;
+  box-shadow: #6E7849 0px 0px 10px;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 1.5em;
+  margin: auto;
+  padding: 10px;
+  text-decoration: none;
+  text-shadow: #000000 5px 5px 15px;
+}
+
+.button:hover {
+  padding: 15px;
+}
+.button2 {
+border: 1px solid #ED9E21;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #FFC578), color-stop(0.9, #FB9D23) );
+background: -moz-linear-gradient( center top, #FFC578 10%, #FB9D23 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFC578', endColorstr='#FB9D23');
+background-color: #FFC578;
+-moz-box-shadow: inset 0px 1px 2px 0px #FFFFFF;
+-webkit-box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+text-shadow: 1px 1px 2px #FFFFFF;
+font-weight: bold;
+margin: 5px 5px;
+padding: 8px 5px;
+color: #000000;
+letter-spacing: 2px;
+font-family: Trebuchet MS, sans-serif;
+font-size: 16px;
+width: 200px;
+text-transform: capitalize;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+display: inline-block;
+}
+.button2:hover {
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #FB9D23), color-stop(0.9, #FFC578) );
+background: -moz-linear-gradient( center top, #FB9D23 10%, #FFC578 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FB9D23', endColorstr='#FFC578');
+background-color: #FB9D23;
+}
+.button2:active {
+position: relative;
+top: 5px;
+left: 5px;
+}
+.button3 {
+border: 1px solid #6A85B6;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #BAC8E0), color-stop(0.9, #6A85B6) );
+background: -moz-linear-gradient( center top, #BAC8E0 10%, #6A85B6 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#BAC8E0', endColorstr='#6A85B6');
+background-color: #BAC8E0;
+-moz-box-shadow: inset 0px 1px 2px 0px #FFFFFF;
+-webkit-box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+text-shadow: 1px 1px 2px #000000;
+font-weight: bold;
+margin: 5px 5px;
+padding: 8px 5px;
+color: #FFFFFF;
+letter-spacing: 1px;
+font-family: Trebuchet MS, sans-serif;
+font-size: 16px;
+width: 150px;
+text-transform: capitalize;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+display: inline-block;
+}
+.button3:hover {
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #6A85B6), color-stop(0.9, #BAC8E0) );
+background: -moz-linear-gradient( center top, #6A85B6 10%, #BAC8E0 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6A85B6', endColorstr='#BAC8E0');
+background-color: #6A85B6;
+}
+.button3:active {
+position: relative;
+top: 5px;
+left: 5px;
+}
+.button4 {
+border: 1px solid #79A854;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #ABDC28), color-stop(0.9, #94C60F) );
+background: -moz-linear-gradient( center top, #ABDC28 10%, #94C60F 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ABDC28', endColorstr='#94C60F');
+background-color: #ABDC28;
+-moz-box-shadow: inset 0px 1px 2px 0px #FFFFFF;
+-webkit-box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+-moz-border-radius: 5px;
+-webkit-border-radius: 5px;
+border-radius: 5px;
+text-shadow: 1px 1px 2px #000000;
+font-weight: bold;
+margin: 5px 5px;
+padding: 8px 5px;
+color: #FFFFFF;
+letter-spacing: 1px;
+font-family: Trebuchet MS, sans-serif;
+font-size: 16px;
+width: 150px;
+text-transform: capitalize;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+display: inline-block;
+}
+.button4:hover {
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #94C60F), color-stop(0.9, #ABDC28) );
+background: -moz-linear-gradient( center top, #94C60F 10%, #ABDC28 90% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#94C60F', endColorstr='#ABDC28');
+background-color: #94C60F;
+}
+.button4:active {
+position: relative;
+top: 5px;
+left: 5px;
+}
+.msgbutton {
+border: 3px solid #E0D163;
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #FFFFFD), color-stop(0.61, #F1DA34) );
+background: -moz-linear-gradient( center top, #FFFFFD 10%, #F1DA34 61% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFD', endColorstr='#F1DA34');
+background-color: #FFFFFD;
+-moz-box-shadow: inset 0px 1px 2px 0px #FFFFFF;
+-webkit-box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+box-shadow: inset 0px 1px  2px 0px #FFFFFF;
+-moz-border-radius: 50px;
+-webkit-border-radius: 50px;
+border-radius: 50px;
+text-shadow: 1px 1px 2px #FFFFFF;
+font-weight: bold;
+margin: 5px 5px;
+padding: 8px 30px;
+color: #82773D;
+letter-spacing: 1px;
+font-family: Tahoma, sans-serif;
+font-size: 16px;
+width: 150px;
+text-transform: capitalize;
+text-align: center;
+text-decoration: none;
+cursor: pointer;
+display: inline-block;
+}
+.msgbutton:hover {
+background: -webkit-gradient( linear, left top, left bottom, color-stop(0.1, #F1DA34), color-stop(0.61, #FFFFFD) );
+background: -moz-linear-gradient( center top, #F1DA34 10%, #FFFFFD 61% );
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F1DA34', endColorstr='#FFFFFD');
+background-color: #F1DA34;
+}
+.msgbutton:active {
+position: relative;
+top: 1px;
+left: 0px;
+}

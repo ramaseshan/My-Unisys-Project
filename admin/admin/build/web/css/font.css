@@ -1,0 +1,74 @@
+/* 
+    Document   : font
+    Created on : Jan 11, 2013, 8:03:20 AM
+    Author     : Seshan
+    Description:
+        Purpose of the stylesheet follows.
+*/
+@import url("fonts.css");
+.home { 
+    font-family: "comic", Verdana, Tahoma;
+    color:black;
+text-align:justify;
+}
+body
+{
+
+font-family: "comic";
+color:black;
+text-align:justify;
+}
+h1 {
+font-family:fantasy;
+margin:0;
+font-weight: bold;
+display: inline;
+}
+
+p
+{
+text-indent:50px;
+font-family:"Times New Roman";
+font-size:14px;
+text-align:justify;
+color:chartreuse;
+}
+div
+{
+    font-family: alger,sans-serif;
+}
+.highlight
+{
+    
+    text-align: center;
+    color: blue;
+    font-family: "ace";
+    font-size: 20px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 750px;
+    
+}
+.contact{
+    font-family: monospace,cursive,"arial";
+    font-size: 18px;
+font-weight: bolder;
+color: green;
+}
+.heading{
+    font-family: shield;
+    text-align: center;
+    color: blue;
+    font-size: 70px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 750px;
+}
+
+.error
+{
+    color: red;
+    font-size: 15px;
+    font-family: error;
+    
+}

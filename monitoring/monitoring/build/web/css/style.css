@@ -1,0 +1,60 @@
+@import url("fonts.css");
+#formdiv {
+    border: solid 2px #b7ddf2;
+    background: #ADD8E6; 
+    width:350px; 
+    height:250px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:5px;
+}
+
+#formdiv h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align:center;
+    color: #2A1F55;
+    margin-bottom: 8px;
+}
+
+#formdiv p {
+    font-size: 13px;
+    color: #2A0000;
+    margin-bottom: 20px;
+    border-bottom: solid 1px #2A1F55;
+    padding-bottom: 10px;
+}
+
+#formdiv label {
+    display: block;
+    font-weight: bold;
+    color:#2A1F00;
+    text-align: right;
+    width: 100px;
+    float: left;
+}
+
+ #formdiv input {
+    float: left;
+    font-size: 10px;
+    background-color: #F5F5F5;
+    padding: 4px 2px;
+    border: solid 1px #80764D;
+    width: 200px;
+    margin: 2px 0 20px 10px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:2px;
+} 
+
+#formdiv button {
+    clear: both;
+    margin-left: 20px;
+    width: 100px;
+    height: 30px;
+    background: #008080;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 11px;
+    font-weight: bold;
+    -moz-border-radius:5px;
+    -webkit-border-radius:2px;
+}
